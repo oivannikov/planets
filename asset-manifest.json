@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/planets/static/css/main.fe78857a.chunk.css",
+    "main.js": "/planets/static/js/main.bce403dc.chunk.js",
+    "main.js.map": "/planets/static/js/main.bce403dc.chunk.js.map",
+    "runtime-main.js": "/planets/static/js/runtime-main.7e12f65b.js",
+    "runtime-main.js.map": "/planets/static/js/runtime-main.7e12f65b.js.map",
+    "static/js/2.31ef09bd.chunk.js": "/planets/static/js/2.31ef09bd.chunk.js",
+    "static/js/2.31ef09bd.chunk.js.map": "/planets/static/js/2.31ef09bd.chunk.js.map",
+    "index.html": "/planets/index.html",
+    "static/css/main.fe78857a.chunk.css.map": "/planets/static/css/main.fe78857a.chunk.css.map",
+    "static/js/2.31ef09bd.chunk.js.LICENSE.txt": "/planets/static/js/2.31ef09bd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7e12f65b.js",
+    "static/js/2.31ef09bd.chunk.js",
+    "static/css/main.fe78857a.chunk.css",
+    "static/js/main.bce403dc.chunk.js"
+  ]
+}
