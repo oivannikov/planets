@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+
+
+import { Route, Switch } from 'react-router-dom';
+import planets from './api/planets.json';
+
+import './App.scss';
+import { CurrentPlanet } from './components/CurrentPlanet/CurrentPlanet';
+import { Planets } from './components/Planets/Planets';
 
 function App() {
+  const [currentPlanet, setCurrentPlanet] = useState({});
+
+  function getUrl(id) {
+    const currentPlanet = planets.find(planet => planet.id === id);
+
+    setCurrentPlanet(currentPlanet);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="main">
+      <Switch>
+        <Route
+          path="/planets"
+          component={() => <Planets planets={planets} getUrl={getUrl} /> }
+          exact
+        />
+        <Route
+          path="/planets/:planetId"
+          component={() => <CurrentPlanet currentPlanet={currentPlanet} /> }
+        />
+      </Switch>
+
+      <div className="main__substrate"/>
+    </main>
   );
 }
 
