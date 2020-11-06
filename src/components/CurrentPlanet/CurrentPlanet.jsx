@@ -1,7 +1,9 @@
 import React from 'react';
 
-import './CurrentPlanet.scss';
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
+import './CurrentPlanet.scss';
 export function CurrentPlanet({ currentPlanet }) {
   console.log(currentPlanet);
   const {
@@ -15,13 +17,12 @@ export function CurrentPlanet({ currentPlanet }) {
     residents,
     img,
     summary
-    
   } = currentPlanet;
 
   return (
     <div className="info">
       <div className="info__options">
-        
+
         <div className="info__photo">
           <img className="info__img" src={`${img}`} alt="planet" />
         </div>
@@ -37,12 +38,26 @@ export function CurrentPlanet({ currentPlanet }) {
           <li className="info__detail">Residents: {residents}</li>
         </ul>
       </div>
-  
+
       <div className="info__summary">
-        <p className="info__text">
-          {summary}
-        </p>
+        <NavLink className="info__come-back" to="/">&#171;</NavLink>
+        <p className="info__text">{summary}</p>
       </div>
     </div>
-  )
+  );
+}
+
+CurrentPlanet.propTypes = {
+  planet: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    climate: PropTypes.string.isRequired,
+    population: PropTypes.string,
+    id: PropTypes.number.isRequired,
+    img: PropTypes.string.isRequired,
+    diameter: PropTypes.string,
+    gravity: PropTypes.string.isRequired,
+    terrain: PropTypes.string.isRequired,
+    rotationPeriod: PropTypes.string.isRequired,
+    residents: PropTypes.string,
+  }).isRequired
 }

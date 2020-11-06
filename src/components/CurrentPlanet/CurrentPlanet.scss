@@ -32,8 +32,23 @@
   }
 
   &__summary {
+    display: flex;
     width: 600px;
     margin-top: 80px;
-    line-height: 26px;
+    line-height: 22px;
+    align-items: center;
+  }
+
+  &__come-back {
+    color: white;
+    background: none;
+    margin-right: 60px;
+    font-size: 64px;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.808);
+    }
   }
 }

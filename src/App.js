@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 
-
 import { Route, Switch } from 'react-router-dom';
 import planets from './api/planets.json';
 
-import './App.scss';
 import { CurrentPlanet } from './components/CurrentPlanet/CurrentPlanet';
 import { Planets } from './components/Planets/Planets';
+
+import './App.scss';
 
 function App() {
   const [currentPlanet, setCurrentPlanet] = useState({});
@@ -21,7 +21,7 @@ function App() {
     <main className="main">
       <Switch>
         <Route
-          path="/planets"
+          path="/"
           component={() => <Planets planets={planets} getUrl={getUrl} /> }
           exact
         />
@@ -31,7 +31,7 @@ function App() {
         />
       </Switch>
 
-      <div className="main__substrate"/>
+      <div className="main__substrate" />
     </main>
   );
 }

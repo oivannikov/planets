@@ -4,11 +4,17 @@ ul,
 li {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 ul,
 li {
   list-style: none;
+}
+
+button {
+  outline: none;
+  border: none;
 }
 
 .main {
@@ -31,6 +37,5 @@ li {
     z-index: 2;
     background-color: black;
     opacity: 7;
-
   }
 }

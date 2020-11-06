@@ -1,14 +1,16 @@
 import React from 'react';
 
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import './Planet.scss';
 
 export function Planet({ planet, getUrl }) {
   const { name, climate, population, id, img} = planet;
-  
+
   return (
     <div className="planet">
+
       <div className="planet__photo">
         <img className="planet__img" src={img} alt="planet"/>
       </div>
@@ -26,5 +28,15 @@ export function Planet({ planet, getUrl }) {
         </NavLink>
       </div>
     </div>
-  )
+  );
+}
+
+Planet.propTypes = {
+  planet: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    climate: PropTypes.string.isRequired,
+    population: PropTypes.string,
+    id: PropTypes.number.isRequired,
+    img: PropTypes.string.isRequired,
+  }).isRequired
 }
