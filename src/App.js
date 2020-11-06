@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import planets from './api/planets.json';
 
 import { CurrentPlanet } from './components/CurrentPlanet/CurrentPlanet';
@@ -20,8 +20,11 @@ function App() {
   return (
     <main className="main">
       <Switch>
+        <Route path="/" exact>
+          <Redirect to="/planets/" />
+        </Route>
         <Route
-          path="/"
+          path="/planets/"
           component={() => <Planets planets={planets} getUrl={getUrl} /> }
           exact
         />
