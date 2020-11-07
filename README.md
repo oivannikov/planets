@@ -20,7 +20,7 @@
 
     "scripts": {
       "predeploy": "npm run build" или если у вас yarn, то "yarn build" без слова run,
-      "deploy": "gh-pages -b build"
+      "deploy": "gh-pages -d build"
      }
 
   5) Установить пакет gh-pages c помощью команды "npm i -D gh-pages"
