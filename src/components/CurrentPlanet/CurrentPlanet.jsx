@@ -16,7 +16,6 @@ export function CurrentPlanet({ currentPlanet }) {
     rotationPeriod,
     residents,
     img,
-    summary
   } = currentPlanet;
 
   return (
@@ -32,16 +31,22 @@ export function CurrentPlanet({ currentPlanet }) {
           <li className="info__detail">Diamentr: {diameter}</li>
           <li className="info__detail">Climate: {climate}</li>
           <li className="info__detail">Gravity: {gravity}</li>
-          <li className="info__detail">Terrain: {terrain}</li>
           <li className="info__detail">Population: {population}</li>
           <li className="info__detail">Rotation Period: {rotationPeriod}</li>
           <li className="info__detail">Residents: {residents}</li>
         </ul>
       </div>
 
-      <div className="info__summary">
-        <NavLink className="info__come-back" to="/">&#171;</NavLink>
-        <p className="info__text">{summary}</p>
+      <div className="info__terrain">
+
+        <div className="info__terrain-heading">
+          <h3>Terrain: </h3>
+        </div>
+
+        <div className="info__content">
+          <NavLink className="info__come-back" to="/">&#171;</NavLink>
+          <p className="info__terrain-text">{terrain}</p>  
+        </div>
       </div>
     </div>
   );
