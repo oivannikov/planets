@@ -1,4 +1,4 @@
-[DEMO LINK](https://oivannikov.github.io/planets/);
+[DEMO LINK](https://oivannikov.github.io/planets/)
 
 #Инструкция по установке:
 
